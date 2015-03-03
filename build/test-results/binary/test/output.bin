@@ -1,0 +1,13 @@
+ê2018-12-22T17:43:00.720 | est worker | ClasspathStoryFinder | INFO   - Searching for stories called [berlin-clock.story] in [[C:\Users\deepa\git\ubstest\build\classes\test, C:\Users\deepa\git\ubstest\build\resources\test, C:\Users\deepa\git\ubstest\build\classes\main]] 
+‘2018-12-22T17:43:00.743 | est worker | aviouralTestEmbedder | INFO   - Running [BehaviouralTestEmbedder] with spring_stories [[file:/C:/Users/deepa/git/ubstest/build/resources/test/stories/berlin-clock.story]] 
+!Processing system properties {}
+‹Using controls EmbedderControls[batch=false,skip=false,generateViewAfterStories=true,ignoreFailureInStories=false,ignoreFailureInView=false,verboseFailures=false,verboseFiltering=false,storyTimeoutInSecs=300,threads=1]
+`Running story file:/C:/Users/deepa/git/ubstest/build/resources/test/stories/berlin-clock.story
+Ÿ
+(BeforeStories)
+
+
+(AfterStories)
+
+Generating reports view to 'C:\Users\deepa\git\ubstest\build\classes\jbehave' using formats '[stats, html, console]' and view properties '{defaultFormats=stats, decorateNonHtml=true, viewDirectory=view, decorated=ftl/jbehave-report-decorated.ftl, reports=ftl/jbehave-reports-with-totals.ftl, maps=ftl/jbehave-maps.ftl, navigator=ftl/jbehave-navigator.ftl, views=ftl/jbehave-views.ftl, nonDecorated=ftl/jbehave-report-non-decorated.ftl}'
+iReports view generated with 1 stories (of which 0 pending) containing 18 scenarios (of which 0 pending)
