@@ -1,12 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ubs.opsit.interviews.BerlinClockFixture" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-22T12:13:00" hostname="DESKTOP-359QNTR" time="0.807">
+<testsuite name="com.ubs.opsit.interviews.BerlinClockFixture" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-22T12:42:57" hostname="DESKTOP-359QNTR" time="0.824">
   <properties/>
-  <testcase name="berlinClockAcceptanceTests" classname="com.ubs.opsit.interviews.BerlinClockFixture" time="0.807"/>
-  <system-out><![CDATA[2018-12-22T17:43:00.720 | est worker | ClasspathStoryFinder | INFO   - Searching for stories called [berlin-clock.story] in [[C:\Users\deepa\git\ubstest\build\classes\test, C:\Users\deepa\git\ubstest\build\resources\test, C:\Users\deepa\git\ubstest\build\classes\main]] 
-2018-12-22T17:43:00.743 | est worker | aviouralTestEmbedder | INFO   - Running [BehaviouralTestEmbedder] with spring_stories [[file:/C:/Users/deepa/git/ubstest/build/resources/test/stories/berlin-clock.story]] 
+  <testcase name="berlinClockAcceptanceTests" classname="com.ubs.opsit.interviews.BerlinClockFixture" time="0.824"/>
+  <system-out><![CDATA[2018-12-22T18:12:58.166 | est worker | ClasspathStoryFinder | INFO   - Searching for stories called [berlin-clock.story] in [[C:\Users\deepa\git\ubstest\build\classes\test, C:\Users\deepa\git\ubstest\build\resources\test, C:\Users\deepa\git\ubstest\build\classes\main]] 
+2018-12-22T18:12:58.188 | est worker | aviouralTestEmbedder | INFO   - Running [BehaviouralTestEmbedder] with spring_stories [[file:/C:/Users/deepa/git/ubstest/build/resources/test/stories/berlin-clock.story]] 
 Processing system properties {}
 Using controls EmbedderControls[batch=false,skip=false,generateViewAfterStories=true,ignoreFailureInStories=false,ignoreFailureInView=false,verboseFailures=false,verboseFiltering=false,storyTimeoutInSecs=300,threads=1]
 Running story file:/C:/Users/deepa/git/ubstest/build/resources/test/stories/berlin-clock.story
+Story: The Berlin Clock
+(file:/C:/Users/deepa/git/ubstest/build/resources/test/stories/berlin-clock.story)
+Meta:
+@scope interview
+
+Scenario: Midnight
+When the time is 00:00:00 and format is H[H]:mm:ss
+Then the clock should look like
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+
+Scenario: Midnight
+When the time is 00:00:00 AM and format is h[h]:mm:ss a
+Then the clock should look like
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+
+Scenario: Just after Midnight
+When the time is 00:01:01 and format is H[H]:mm:ss
+Then the clock should look like
+O
+OOOO
+OOOO
+OOOOOOOOOOO
+YOOO
+
+Scenario: Just after Midnight
+When the time is 00:01:01 AM and format is h[h]:mm:ss a
+Then the clock should look like
+O
+OOOO
+OOOO
+OOOOOOOOOOO
+YOOO
+
+Scenario: An Hour after Midnight
+When the time is 01:01:01 and format is H[H]:mm:ss
+Then the clock should look like
+O
+OOOO
+ROOO
+OOOOOOOOOOO
+YOOO
+
+Scenario: An Hour after Midnight
+When the time is 01:01:01 AM and format is h[h]:mm:ss a
+Then the clock should look like
+O
+OOOO
+ROOO
+OOOOOOOOOOO
+YOOO
+
+Scenario: Early Morning
+When the time is 06:30:19 and format is H[H]:mm:ss
+Then the clock should look like
+O
+ROOO
+ROOO
+YYRYYROOOOO
+OOOO
+
+Scenario: Early Morning
+When the time is 06:30:19 AM and format is h[h]:mm:ss a
+Then the clock should look like
+O
+ROOO
+ROOO
+YYRYYROOOOO
+OOOO
+
+Scenario: Middle of the afternoon
+When the time is 13:17:01 and format is H[H]:mm:ss
+Then the clock should look like
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO
+
+Scenario: Middle of the afternoon
+When the time is 01:17:01 PM and format is h[h]:mm:ss a
+Then the clock should look like
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO
+
+Scenario: At afternoon
+When the time is 12:00:00 and format is H[H]:mm:ss
+Then the clock should look like
+Y
+RROO
+RROO
+OOOOOOOOOOO
+OOOO
+
+Scenario: At afternoon
+When the time is 12:00:00 PM and format is h[h]:mm:ss a
+Then the clock should look like
+Y
+RROO
+RROO
+OOOOOOOOOOO
+OOOO
+
+Scenario: Around  evening
+When the time is 17:17:01 and format is H[H]:mm:ss
+Then the clock should look like
+O
+RRRO
+RROO
+YYROOOOOOOO
+YYOO
+
+Scenario: Around  evening
+When the time is 05:17:01 PM and format is h[h]:mm:ss a
+Then the clock should look like
+O
+RRRO
+RROO
+YYROOOOOOOO
+YYOO
+
+Scenario: Just before midnight
+When the time is 23:59:59 and format is H[H]:mm:ss
+Then the clock should look like
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY
+
+Scenario: Just before midnight
+When the time is 11:59:59 PM and format is h[h]:mm:ss a
+Then the clock should look like
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY
+
+Scenario: Midnight
+When the time is 24:00:00 and format is H[H]:mm:ss
+Then the clock should look like
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+OOOO
+
+Scenario: Midnight
+When the time is 12:00:00 AM and format is h[h]:mm:ss a
+Then the clock should look like
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
 
 (BeforeStories)
 

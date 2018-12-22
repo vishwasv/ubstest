@@ -19,12 +19,13 @@ public class BerlinClockFixture {
 
     @Test
     public void berlinClockAcceptanceTests() throws Exception {
-       	aBehaviouralTestRunner()
+        aBehaviouralTestRunner()
                 .usingStepsFrom(this)
                 .withStory("berlin-clock.story")
                 .run();
     }
-    
+
+
 
     @When("the time is $time and format is $format")
     public void whenTheTimeIs(String time , String format) {
@@ -35,6 +36,6 @@ public class BerlinClockFixture {
     @Then("the clock should look like $")
     public void thenTheClockShouldLookLike(String theExpectedBerlinClockOutput) {
     	berlinClock = new BerlinClockTimeConverter(theFormat);
-    	assertThat(berlinClock.convertTime(theTime)).isEqualTo(theExpectedBerlinClockOutput);
+        assertThat(berlinClock.convertTime(theTime)).isEqualTo(theExpectedBerlinClockOutput);
     }
 }

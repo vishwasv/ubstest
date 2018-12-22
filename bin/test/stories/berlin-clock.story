@@ -8,6 +8,7 @@ Narrative:
     I want to tell the time using the Berlin Clock
     So that I can increase then number of ways that I can read the time
 
+<<<<<<< HEAD
 Scenario: Midnight 
 When the time is 00:00:00 and format is H[H]:mm:ss
 Then the clock should look like
@@ -19,6 +20,10 @@ OOOO
 
 Scenario: Midnight  
 When the time is 00:00:00 AM and format is h[h]:mm:ss a
+=======
+Scenario: Midnight
+When the time is 00:00:00
+>>>>>>> d425a8d3abdd0e5fff577db8699106fac7520258
 Then the clock should look like
 Y
 OOOO
@@ -26,6 +31,7 @@ OOOO
 OOOOOOOOOOO
 OOOO
 
+<<<<<<< HEAD
 Scenario: Just after Midnight
 When the time is 00:01:01 and format is H[H]:mm:ss
 Then the clock should look like
@@ -131,10 +137,19 @@ Then the clock should look like
 O
 RRRO
 RROO
+=======
+Scenario: Middle of the afternoon
+When the time is 13:17:01
+Then the clock should look like
+O
+RROO
+RRRO
+>>>>>>> d425a8d3abdd0e5fff577db8699106fac7520258
 YYROOOOOOOO
 YYOO
 
 Scenario: Just before midnight
+<<<<<<< HEAD
 When the time is 23:59:59 and format is H[H]:mm:ss
 Then the clock should look like
 O
@@ -145,6 +160,9 @@ YYYY
 
 Scenario: Just before midnight
 When the time is 11:59:59 PM and format is h[h]:mm:ss a
+=======
+When the time is 23:59:59
+>>>>>>> d425a8d3abdd0e5fff577db8699106fac7520258
 Then the clock should look like
 O
 RRRR
@@ -152,9 +170,14 @@ RRRO
 YYRYYRYYRYY
 YYYY
 
+<<<<<<< HEAD
 
 Scenario: Midnight
 When the time is 24:00:00 and format is H[H]:mm:ss
+=======
+Scenario: Midnight
+When the time is 24:00:00
+>>>>>>> d425a8d3abdd0e5fff577db8699106fac7520258
 Then the clock should look like
 Y
 RRRR
@@ -162,6 +185,7 @@ RRRR
 OOOOOOOOOOO
 OOOO
 
+<<<<<<< HEAD
 Scenario: Midnight
 When the time is 12:00:00 AM and format is h[h]:mm:ss a
 Then the clock should look like
@@ -180,5 +204,7 @@ OOOO
 
 
 
+=======
+>>>>>>> d425a8d3abdd0e5fff577db8699106fac7520258
 
 
